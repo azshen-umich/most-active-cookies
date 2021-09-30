@@ -1,2 +1,2 @@
 # most-active-cookies
- Coding assingment for Quantcast
+ Coding task for Quantcast
