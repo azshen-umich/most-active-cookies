@@ -4,6 +4,7 @@
 #include <getopt.h>
 #include <string>
 #include "mostActiveCookies.h"
+#include <unordered_map>
 
 using namespace std;
 
@@ -26,4 +27,10 @@ void mostActiveCookies::readCmdLine(int argc, char *argv[])
 
 int convertDate(string stringDate)
 {
+    //remove the dashes from the date
+    stringDate.erase(stringDate.begin() + 4);
+    stringDate.erase(stringDate.begin() + 7);
+
+    //convert to integer
+    return stoi(stringDate);
 }
