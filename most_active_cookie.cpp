@@ -12,7 +12,8 @@ using namespace std;
 
 void mostActiveCookies::readCmdLine(int argc, char *argv[])
 {
-    infile.open(argv[1]);
+    string filename = argv[1];
+    infile.open(filename);
     streambuf *cinbuf = cin.rdbuf();
     cin.rdbuf(infile.rdbuf());
 
