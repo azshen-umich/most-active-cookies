@@ -88,7 +88,7 @@ void mostActiveCookies::readLog()
 
         pair<int, vector<CookieInfo>> temp;
 
-        if (map.find(date) == map.end()) //check if date key exists, add cookie to that date
+        if (map.find(date) != map.end()) //check if date key exists, add cookie to that date
         {
             auto pred = [cookieInput](CookieInfo cookieData)
             {
@@ -107,8 +107,9 @@ void mostActiveCookies::readLog()
         }
         else //if date key DNE, then insert a new key value pair.
         {
-            temp.first = date;
-            temp.second.push_back(CookieInfo(cookieInput, 1));
+            map[date].push_back(CookieInfo(cookieInput, 1));
+            //temp.first = date;
+            //temp.second.push_back(CookieInfo(cookieInput, 1));
         }
     }
     infile.close();
