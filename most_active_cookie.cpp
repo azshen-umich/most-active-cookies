@@ -5,7 +5,7 @@
 #include <getopt.h>
 #include <string>
 #include <fstream>
-#include "mostActiveCookies.h"
+#include "most_active_cookie.h"
 #include <unordered_map>
 
 using namespace std;
@@ -66,7 +66,7 @@ void mostActiveCookies::readLog()
                 auto it = find_if(map[date].begin(), map[date].end(), pred);
                 it->cookieCount++;
             }
-            else
+            else //if cookie DNE, add it
             {
                 map[date].push_back(CookieInfo(cookieInput, 1));
             }
