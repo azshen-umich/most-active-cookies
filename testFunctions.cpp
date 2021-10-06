@@ -4,4 +4,10 @@
 
 using namespace std;
 
+TEST(test_read_command_line_1)
+{
+    mostActiveCookies test;
+    int argc = 4;
+}
+
 TEST_MAIN()
