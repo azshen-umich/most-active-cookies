@@ -45,9 +45,10 @@ void mostActiveCookies::readLog()
 
     while (cin >> input)
     {
+        //get inut from file
         cookieInput = input.substr(0, input.find(","));
         dateInput = input.substr(input.find(",") + 1, input.length());
-
+        //format the date correctly
         dateInput.erase(dateInput.begin() + 4);
         dateInput.erase(dateInput.begin() + 6);
         dateInput.erase(dateInput.begin() + 8, dateInput.end());

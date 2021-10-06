@@ -5,7 +5,7 @@
 
 using namespace std;
 
-TEST(test_convert_date)
+TEST(Test_convert_date)
 {
     mostActiveCookies test;
 
