@@ -14,9 +14,10 @@ void mostActiveCookies::readCmdLine(int argc, char *argv[])
 {
     string filename = argv[1];
     infile.open(filename);
+    //redirect fstream to cin
     streambuf *cinbuf = cin.rdbuf();
     cin.rdbuf(infile.rdbuf());
-
+    //make -d a toggle for future uses
     if (argv[2] == "-d")
     {
         utc = true;
